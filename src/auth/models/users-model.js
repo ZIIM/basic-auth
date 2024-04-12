@@ -3,15 +3,15 @@ const { Sequelize } = require("sequelize");
 const User = (Sequelize, DataTypes) => {
   return Sequelize.define("User", {
     username:{
-		type: DataTypes.STRING,
-		// meaning allowNull means fields cant be empty
-        allowNull:false,
-        },
-	password:{
-		type: DataTypes.STRING,
-		allowNull:false,
-	},
-    });
+      type: DataTypes.STRING,
+      // allowNull means fields cant be empty
+      allowNull:false,
+    },
+    password:{
+      type: DataTypes.STRING,
+      allowNull:false,
+    },
+  });
 };
 
 module.exports = User;

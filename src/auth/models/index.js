@@ -8,6 +8,6 @@ const sequelize = new Sequalize(DATABASE_URL);
 const User = userSchema(sequelize, Datatypes);
 
 module.exports = {
-    User,
-    sequelize,
+  User,
+  sequelize,
 };

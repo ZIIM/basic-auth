@@ -12,7 +12,7 @@ const signUp = async(req, res, next) => {
     if(record){
       next();
     } else {
-      next("Unable to sign up.")
+      next("Unable to sign up.");
     }
   } catch (error) {
     res.status(403).send("Invalid Sign Up");
