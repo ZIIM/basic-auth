@@ -3,7 +3,7 @@ const base64 = require("base-64"); // pw encoding
 const {User, sequelize} = require("../models");
 
 User.beforeCreate(async function (user){
-  user.passwordHash = await bcrypt.hash(user.passwordHash, 10);
+  user.passwordHash = await bcrypt.hash(user.passwordHash, 10); // amount of rounds it takes, in theory....
 });
 
 const signUp = async(req, res, next) => {
